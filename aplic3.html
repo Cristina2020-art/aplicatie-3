@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title of the document</title>
+    <style>
+      table,tr,th,td {
+        border: 1px solid #ccc;
+        text-align: center;
+        border-collapse: collapse;
+        padding: 8px;
+      }
+      #toggle {
+        display: none;
+      }
+      .expandable {
+        visibility: collapse;
+        background: #1c87c9;
+      }
+      #btn {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 10px 20px;
+        background-color: #8ebf42;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 3px;
+      }
+      #toggle:checked ~ * .expandable {
+        visibility: visible;
+      }
+      #toggle:checked ~ #btn {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>::checked selector example</h2>
+    <input type="checkbox" id="toggle" />
+    <table>
+      <thead>
+        <tr>
+          <th>Column 1</th>
+          <th>Column 2</th>
+          <th>Column 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="expandable">
+          <td>[more text]</td>
+          <td>[more text]</td>
+          <td>[more text]</td>
+        </tr>
+        <tr>
+          <td>[text]</td>
+          <td>[text]</td>
+          <td>[text]</td>
+        </tr>
+        <tr class="expandable">
+          <td>[more text]</td>
+          <td>[more text]</td>
+          <td>[more text]</td>
+        </tr>
+        <tr>
+          <td>[text]</td>
+          <td>[text]</td>
+          <td>[text]</td>
+        </tr>
+        <tr class="expandable">
+          <td>[more text]</td>
+          <td>[more text]</td>
+          <td>[more text]</td>
+        </tr>
+      </tbody>
+    </table>
+    <label for="toggle" id="btn">Click here!</label>
+  </body>
+</html>
